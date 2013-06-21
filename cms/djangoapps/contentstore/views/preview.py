@@ -73,7 +73,8 @@ def preview_component(request, location):
         'preview': get_module_previews(request, component)[0],
         'editor': wrap_xmodule(component.get_html, component, 'xmodule_edit.html')(),
         'module_custom_html_tabs': component.tabs,
-        'component_location': component.location.html_id()
+        'component_location': component.location,
+        'component_location_html_id': component.location.html_id()
     })
 
 
